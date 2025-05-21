@@ -14,10 +14,14 @@
         .heading{
             display: block;
             text-align: center;
+            margin: 5px;
         }
         .img{
-            height: 250px;
-            margin: 20px 100px;
+            height: 300px;
+            width: 350px;
+            margin: auto 50px;
+            margin-bottom: 30px;
+            
         }
         .img-sam{
             height: 63px;
@@ -91,14 +95,14 @@
     <div class="container">
         <h2 class="heading">Shopping Cart</h2>
         <hr>
-        <img src="./image/watch.jpg" class="img">
+        <img src="./image/watch.jpg" class="img" id="main-img">
         <div class="img-container">
-            <img src="./image/watch.jpg" class="img-sam">
-            <img src="./image/s1.jpg" class="img-sam">
-            <img src="./image/s2.jpg" class="img-sam">
-            <img src="./image/s3.jpg" class="img-sam">
-            <img src="./image/s4.jpg" class="img-sam">
-            <img src="./image/s5.jpg" class="img-sam">
+            <img src="./image/watch.jpg" class="img-sam" onmousemove="imageChange('./image/watch.jpg')">
+            <img src="./image/s1.jpg" class="img-sam" onmousemove="imageChange('./image/s1.jpg')">
+            <img src="./image/s2.jpg" class="img-sam" onmousemove="imageChange('./image/s2.jpg')">
+            <img src="./image/s3.jpg" class="img-sam" onmousemove="imageChange('./image/s3.jpg')">
+            <img src="./image/s6.jpg" class="img-sam" onmousemove="imageChange('./image/s6.jpg')">
+            <img src="./image/s7.jpg" class="img-sam" onmousemove="imageChange('./image/s7.jpg')">
 
         </div>
         <div class="sub-container">
@@ -145,6 +149,11 @@
                 alert("Only 5 units of this item can be add per order");
             }  
         }
+        function imageChange(imageNum){
+            const mainImage=document.getElementById('main-img');
+            mainImage.src = imageNum;
+
+        }
     </script>
 </body>
-</html>  
+</html>     
